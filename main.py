@@ -181,7 +181,7 @@ def main(some_string):
     TWOPLACES = Decimal('0.01')
     try:
         ammount = Decimal(num).quantize(TWOPLACES, rounding=ROUND_HALF_UP)
-    except (InvalidOperation):
+    except InvalidOperation:
         return 'Введенные данные имеют некорректный формат'
 
     if exceeding_limits(ammount):
